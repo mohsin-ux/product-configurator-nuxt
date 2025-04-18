@@ -4,7 +4,6 @@ import { PROVIDED_KEY } from "~/constants";
 // const refImage = useTemplateRef('image');
 const refSearch = useTemplateRef("search");
 const hello = Object.values(refSearch);
-const firstRef = ref(hello[0]);
 
 const {
   setImageVisible,
@@ -41,9 +40,9 @@ function handleSearchClick() {
     <div
       v-for="(label, index) in filteredOptions"
       :key="index"
-      class="w-[165px] sm:w-[204px] h-[215px] border flex flex-col items-center gap-2 py-3 px-2 mt-2 relative hover:border-red hover:border-4 hover:p-1 transition-all cursor-pointer overflow-hidden"
+      class="w-[165px] sm:w-[180px] h-[215px] border flex flex-col items-center gap-2 py-3 px-2 mt-2 relative hover:border-red-600 hover:border-4 hover:p-1 transition-all cursor-pointer overflow-hidden"
       :class="{
-        'border-red border-4 p-1': selectedOptionLabel === label,
+        'border-red-600 border-4 p-1': selectedOptionLabel === label,
       }"
       @click="handleImageClick(index, label)"
     >

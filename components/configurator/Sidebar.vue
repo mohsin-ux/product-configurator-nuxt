@@ -97,7 +97,7 @@ const refSideBar = useTemplateRef("sideBar");
             :disabled="groupsData[selectedGroupIndex].required === 1 && !selectedLabel[selectedGroupIndex]"     
             :enabled="groupsData[selectedGroupIndex].required !== 1"
             @click="nextGroup"
-            class="bg-[#404853] w-full p-5 sm:p-2 text-white text-base font-medium disabled:cursor-not-allowed disabled:opacity-50"
+            class="bg-[#404853] w-full p-5 sm:p-2 text-white text-base font-medium cursor-pointer disabled:cursor-not-allowed disabled:opacity-50"
             >
             <!-- :class="{' disabled:opacity-50 disabled:cursor-not-allowed': groupsData[selectedGroupIndex].required === 1}" -->
             <span v-if="selectedGroupIndex < groupsData.length - 1"
@@ -110,7 +110,7 @@ const refSideBar = useTemplateRef("sideBar");
         <button
           v-if="selectedGroupIndex > 0"
           @click="previousGroup"
-          class="underline text-[#404855] text-sm font-normal max-sm:mb-3"
+          class="underline text-[#404855] cursor-pointer text-sm font-normal max-sm:mb-3"
         >
           Ein Schritt zurück
         </button>

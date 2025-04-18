@@ -25,7 +25,7 @@ function toggleMenuVisible() {
   >
     <ConfiguratorShowImage v-if="allData.isImageVisible.value" />
 
-    <div v-else class="p-6 pb-0 flex flex-col gap-3 w-[550px] h-[500px] border bg-amber-200">
+    <div v-else class="p-6 pb-0 flex flex-col gap-3 w-[610px] h-[500px] border bg-amber-200">
       <h1 class="text-2xl font-bold">
         {{ allData.selectedGroupIndex.value + 1
         }}<span class="max-sm:hidden">.</span>

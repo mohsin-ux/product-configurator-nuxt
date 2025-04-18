@@ -6,11 +6,11 @@ export const useConfigData = async (
 ) => {
 
   // const apiAllData = apiData;
-  const apiAllData = apiData
-  console.log(apiAllData);
+  const apiAllData = apiData  
+  // console.log(apiAllData);
   
   const parsedData: any = Object.values(apiAllData);
-  console.log(parsedData);
+  // console.log(parsedData);
 
   const firstGroupOfAllProfiles = parsedData.map(
     (profileData: any) => profileData.groups[0]
@@ -20,7 +20,7 @@ export const useConfigData = async (
       return `${group.options[0].label} (${group.options[0].labelId})`;
     })
   );
-  console.log(allProfilesLabels.value);
+  // console.log(allProfilesLabels.value);
 
   const groupsData = computed(() =>
     parsedData[currentProfileIndex.value].groups.map((group: any) => ({
